@@ -8,11 +8,13 @@ import { appRoutes } from './routes';
 
 import { AppComponent } from './app.component';
 import { PeopleComponent } from './people/people.component';
+import { PersonComponent } from './person/person.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PeopleComponent
+    PeopleComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,
