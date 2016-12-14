@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { People } from '../people';
+import { PeopleService } from '../people.service';
 
 @Component({
   selector: 'app-people',
@@ -9,11 +9,12 @@ import { People } from '../people';
 })
 export class PeopleComponent implements OnInit {
 
-  people: any = People;
+  people: any;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private peopleService: PeopleService) { }
 
   ngOnInit() {
+    this.people = this.peopleService.getPeople();
   }
 
   navigateToPerson(index: number) {

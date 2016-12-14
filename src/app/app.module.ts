@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router'
 
 import { appRoutes } from './routes';
+import { PeopleService } from './people.service';
 
 import { AppComponent } from './app.component';
 import { PeopleComponent } from './people/people.component';
@@ -22,7 +23,9 @@ import { PersonComponent } from './person/person.component';
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+      PeopleService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
