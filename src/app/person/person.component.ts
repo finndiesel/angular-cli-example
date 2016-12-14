@@ -22,4 +22,8 @@ export class PersonComponent implements OnInit {
     this.person = People[index];
   }
 
+  goHome() {
+    this.router.navigate(['/'])
+  }
+
 }
